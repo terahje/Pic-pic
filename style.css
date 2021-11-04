@@ -39,7 +39,7 @@ button {
   font-size: 2rem;
   color: white;
   text-shadow: 0 2px 5px black;
-  /* added to center start in button */
+  /* added padding to center start in button */
   padding-bottom: 0.5rem;
   background: linear-gradient(to top, #696969, #575757);
   border: 2px solid black;
@@ -55,4 +55,50 @@ button:hover {
 button:active {
   transform: translateY(3px);
   box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.video-container {
+  height: auto;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+video {
+  height: 360px;
+  width: 640px;
+}
+
+/* Media Query */
+@media screen and (max-width: 650px) {
+  video {
+    height: 300px;
+    width: 500px;
+  }
+}
+@media screen and (max-width: 550px) {
+  video {
+    height: 270px;
+    width: 420px;
+  }
+
+  button {
+    width: 100px;
+    height: 55px;
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  video {
+    height: 200px;
+    width: 300px;
+  }
+}
+@media screen and (max-width: 350px) {
+  video {
+    height: 175px;
+    width: 250px;
+  }
 }
