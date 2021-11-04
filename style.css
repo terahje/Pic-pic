@@ -8,9 +8,51 @@ body {
   margin: 0;
   height: 100vh;
   min-height: 100vh;
-  font-family: 'Zen Kurenaido', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgb(37, 37, 37);
+}
+
+/* adding to center button under video, doesnt work without video presing play */
+.pic-n-pic-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-container {
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 7px;
+  /* inset puts shadow inside object, 1. horizontal, 2. vertical, 3. blur- how solid or not solid the color, 4. spread - a negative value reduces the spread, 5. color */
+  box-shadow: inset 0 20px 4px -19px rgba(255, 255, 255, 0.7);
+  margin-top: 1rem;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  width: 120px;
+  height: 75px;
+  font-family: 'Zen Kurenaido', sans-serif;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0 2px 5px black;
+  /* added to center start in button */
+  padding-bottom: 0.5rem;
+  background: linear-gradient(to top, #696969, #575757);
+  border: 2px solid black;
+  border-radius: 3px;
+  box-shadow: inset 0 20px 4px -19px rgba(255, 255, 255, 0.4),
+    0 12px 12px 0 rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background: linear-gradient(to bottom, #696969, #575757);
+}
+
+button:active {
+  transform: translateY(3px);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.3);
 }
